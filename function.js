@@ -13,16 +13,16 @@ function processData(allText) {
 
 function findName(table,id) {
 	for (i= 0; i< table.length; i++) {
-		if (table[i][1] === id) {
-			return table[i][0]
+		if (table[i][1].slice(1,-1) === id) {
+			return table[i][0].slice(1,-1)
 		}
 	}
 }
 
 function findClass(table,id) {
 	for (i= 0; i< table.length; i++) {
-		if (table[i][1] === id) {
-			return table[i][2]
+		if (table[i][1].slice(1,-1) === id) {
+			return table[i][2].slice(1,-1)
 		}
 	}
 }
