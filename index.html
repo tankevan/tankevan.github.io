@@ -1,0 +1,34 @@
+ <html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js">    </script>
+        <script src="function.js">    </script>
+    </head>
+    <body>
+        <div>
+            <table id="user">
+            </table>
+        </div>
+        <script>
+            $.ajax("https://docs.google.com/spreadsheet/pub?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&single=true&gid=0&output=csv").done(function(result){
+            	
+            	table = processData(result)
+                id = getUrlParameter('id')			//change ID here to test
+                //instead of this fixed id, populate the correct id given by the app
+
+                name  = findName(table,id)
+                class_no = findClass(table,id)
+
+                $('<tr><td>ID:</td><td> ' + id + '</td></tr>').appendTo('#user');
+                 $('<tr><td>Name:</td><td> ' + name + '</td></tr>').appendTo('#user');
+                  $('<tr><td>Class:</td><td> ' + class_no + '</td></tr>').appendTo('#user');
+                //instead of this alert, add the right html to display the info
+
+            });
+
+            var client = new HttpClient();
+            client.get('https://docs.google.com/spreadsheet/pub?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&single=true&gid=0&output=csv', function(response) {
+                    alert(response)
+                });
+        </script>
+    </body>
+</html>
