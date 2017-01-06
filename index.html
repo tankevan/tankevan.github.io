@@ -10,7 +10,7 @@
             </table>
         </div>
         <script>
-            $.ajax("https://cors.io/docs.google.com/spreadsheets/d/1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU/pub?output=csv").done(function(result){
+            $.ajax("https://spreadsheets.google.com/tq?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&tqx=out:csv").done(function(result){
             	
             	table = processData(result)
                 id = getUrlParameter('id')			//change ID here to test
