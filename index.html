@@ -10,8 +10,7 @@
             </table>
         </div>
         <script>
-            alert("alerts work");
-            $.ajax("https://docs.google.com/spreadsheet/pub?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&single=true&gid=0&output=csv").done(function(result){
+            $.ajax("http://docs.google.com/spreadsheet/pub?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&single=true&gid=0&output=csv").done(function(result){
             	
             	table = processData(result)
                 id = getUrlParameter('id')			//change ID here to test
