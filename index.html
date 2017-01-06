@@ -1,6 +1,6 @@
  <html>
     <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js">    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js">    </script>
         <script src="function.js">    </script>
     </head>
     <body>
@@ -10,7 +10,7 @@
             </table>
         </div>
         <script>
-            $.ajax("http://docs.google.com/spreadsheet/pub?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&single=true&gid=0&output=csv").done(function(result){
+            $.ajax("https://docs.google.com/spreadsheet/pub?key=1_9XUKXfY6_eo22cPuAuvwIJSXq-b2u0BAMLaayooXfU&single=true&gid=0&output=csv").done(function(result){
             	
             	table = processData(result)
                 id = getUrlParameter('id')			//change ID here to test
